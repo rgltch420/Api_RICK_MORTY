@@ -19,3 +19,13 @@ export async function getCharacters() {
         return [];
     }
 }
+export async function getepisodes() {
+    try {
+        const response = await httpClient.get('/episode');
+        return response.data.results;
+
+    } catch (error) {
+        console.error(error);
+        return [];
+    }
+}
