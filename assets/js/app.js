@@ -6,6 +6,8 @@
 
 import { loadNavbar } from './components/navbar.js';
 import { router } from './router.js';
+import { renderHome } from './pages/home.js';
+import { renderlocation } from './pages/location.js';
 
 /**
  * Navega entre rutas sin recargar.

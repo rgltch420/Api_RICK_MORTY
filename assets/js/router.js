@@ -5,7 +5,9 @@
 import { renderHome } from './pages/home.js';
 import { renderContacts } from './pages/contacts.js';
 import { renderAbout } from './pages/about.js';
-import { renderepisodes } from './pages/episodes.js';
+import { renderlocation } from './pages/location.js';
+
+
 
 /**
  * Rutas disponibles
@@ -14,7 +16,8 @@ const routes = {
     '/': renderHome,
     '/contacts': renderContacts,
     '/about': renderAbout,
-    '/episodes': renderepisodes
+    '/location': renderlocation
+  
 };
 
 /**
@@ -36,3 +39,4 @@ export async function router() {
         `;
     }
 }
+/* esta funcion se encarga de manejar la navegación entre páginas sin recargar la página completa. */
