@@ -30,3 +30,14 @@ export async function getLocation() {
         return [];
     }
 }
+
+export async function getEpisode() {
+    try {
+        const response = await httpClient.get('/episode');
+        return response.data.results;
+
+    } catch (error) {
+        console.error(error);
+        return [];
+    }
+}
