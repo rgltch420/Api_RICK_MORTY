@@ -144,6 +144,7 @@ function openCreateModal(onSave) {
     `;
 
     document.body.appendChild(modal);
+
     document.getElementById('create-image').addEventListener('input', (e) => {
         const url = e.target.value.trim();
         const preview = document.getElementById('create-preview');
