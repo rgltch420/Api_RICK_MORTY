@@ -9,11 +9,9 @@ Single Page Application (SPA) desarrollada con JavaScript Vanilla que consume la
 - Búsqueda y visualización de personajes
 - Consulta de episodios
 - Exploración de ubicaciones
+- Creacion, Eliminacion y Edicion de personajes
 - Navegación SPA sin recargar la página
-- Arquitectura modular
-- Diseño responsive
 - Consumo de API REST
-- Configuración mediante variables de entorno
 
 ---
 
