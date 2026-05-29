@@ -37,6 +37,7 @@ const routes = {
 export async function router() {
     const path   = window.location.pathname;
     const render = routes[path];
+    document.querySelectorAll('.modal-overlay').forEach(m => m.remove());
 
     if (render) {
         await render();
