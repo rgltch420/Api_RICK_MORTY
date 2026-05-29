@@ -1,19 +1,12 @@
 /**
- * ---------------------------------------------------------
  * Archivo principal SPA
- * ---------------------------------------------------------
  */
 
 import { loadNavbar } from './components/navbar.js';
-import { router } from './router.js';
-import { renderHome } from './pages/home.js';
-import { renderlocation } from './pages/location.js';
-import { renderEpisode } from './pages/episode.js';
+import { router }     from './router.js';
 
 /**
- * Navega entre rutas sin recargar.
- *
- * @param {string} url
+ * Navega entre rutas sin recargar la página
  */
 export function navigateTo(url) {
     history.pushState(null, null, url);
@@ -21,25 +14,20 @@ export function navigateTo(url) {
 }
 
 /**
- * Inicialización principal.
+ * Inicialización principal
  */
 window.addEventListener('DOMContentLoaded', async () => {
     await loadNavbar();
     router();
 
-    /**
-     * Intercepta links SPA
-     */
+    // Intercepta todos los links SPA (data-link)
     document.body.addEventListener('click', event => {
-        const target = event.target;
-        if (target.matches('[data-link]')) {
+        if (event.target.matches('[data-link]')) {
             event.preventDefault();
-            navigateTo(target.href);
+            navigateTo(event.target.href);
         }
     });
 });
 
-/**
- * Maneja las acciones de ir atrás/adelante en el navegador navegador
- */
+// Maneja el botón atrás/adelante del navegador
 window.addEventListener('popstate', router);

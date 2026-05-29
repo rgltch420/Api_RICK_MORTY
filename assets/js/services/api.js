@@ -31,7 +31,7 @@ export async function getLocation() {
     }
 }
 
-export async function getepisode() {
+export async function getepisodes() {
     try {
         const response = await httpClient.get('/episode');
         return response.data.results;
