@@ -9,7 +9,6 @@ body {
     color: #ffffff;
 }
 
-/* ── Navbar ── */
 .navbar {
     background: #111111;
     border-bottom: 1px solid #222;
@@ -58,7 +57,6 @@ main {
     gap: 1.5rem;
 }
 
-/* ── Cards ── */
 .card {
     background: #1a1a1a;
     border-radius: 10px;
@@ -174,7 +172,6 @@ main {
     opacity: 0.85;
 }
 
-/* ── Modales ── */
 .modal-overlay {
     position: fixed;
     inset: 0;
@@ -271,7 +268,6 @@ main {
     background: #222;
 }
 
-/* ── Toast ── */
 .toast {
     position: fixed;
     bottom: 1.5rem;
@@ -297,7 +293,6 @@ main {
     to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ── Formularios ── */
 form {
     display: flex;
     flex-direction: column;
