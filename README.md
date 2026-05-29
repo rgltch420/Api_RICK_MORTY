@@ -182,3 +182,4 @@ Este proyecto fue desarrollado con el objetivo de practicar:
 
 ---
 
+![Diagrama_de_flujo](/Diagrama%20de%20flujo%20de%20api%20ricky%20y%20morty.png)
