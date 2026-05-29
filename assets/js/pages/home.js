@@ -13,7 +13,7 @@ export async function renderHome() {
     const container = document.getElementById('characters-container');
     const btn = document.createElement('button');
     btn.id = 'btn-create';
-    btn.textContent = '➕ Crea tu propio personaje';
+    btn.textContent = 'Crea tu propio personaje';
     btn.className = 'btn-create-character';
     container.insertAdjacentElement('beforebegin', btn);
 
@@ -60,17 +60,17 @@ function attachEvents(container, apiCharacters){
       const card = container.querySelector(`[data-id="${id}"]`);
       
       openEditModal(id, card, isLocal, async () => {
-        await renderCharacters(); // Re-renderiza después de editar
+        await renderCharacters(); 
       });
     });
   });
 }
 
 function openEditModal(id, card, isLocal, onSave) {
-    const currentName = card.querySelector('h3').textContent.trim();
-    const currentStatus = card.querySelector('p:nth-child(1)').textContent.replace('Status:', '').trim();
-    const currentSpecies = card.querySelector('p:nth-child(2)').textContent.replace('Species:', '').trim();
-    const currentImage = card.querySelector('img').src;
+    const currentName    = card.querySelector('h3').textContent.trim();
+    const currentStatus  = card.querySelector('.card-body p:nth-child(2)').textContent.replace('Status:', '').trim();
+    const currentSpecies = card.querySelector('.card-body p:nth-child(3)').textContent.replace('Species:', '').trim();
+    const currentImage   = card.querySelector('img').src;
 
     const modal = document.createElement('div');
     modal.className = 'modal-overlay';
@@ -103,7 +103,7 @@ function openEditModal(id, card, isLocal, onSave) {
 
         saveEdit(id, { name, status, species, image });  // ← guarda imagen también
         modal.remove();
-        showToast('Personaje editado ✔️');
+        showToast('Personaje editado');
         onSave();
     });
 }
@@ -112,7 +112,7 @@ function openCreateModal(onSave) {
     modal.className = 'modal-overlay';
     modal.innerHTML = `
         <div class="modal">
-            <h2>🧬 Crear Personaje</h2>
+            <h2>Crear Personaje</h2>
             <label>Nombre <input id="create-name" placeholder="Ej: Rick Sánchez" /></label>
             <label>Especie <input id="create-species" placeholder="Ej: Human" /></label>
             <label>Género
@@ -173,7 +173,7 @@ function openCreateModal(onSave) {
 
         saveCustomCharacter({ name, species, gender, status, image });
         modal.remove();
-        showToast('Personaje creado ✔️');
+        showToast('Personaje creado');
         onSave();
     });
 }
