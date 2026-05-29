@@ -155,7 +155,7 @@ Contiene las plantillas HTML utilizadas por cada página de la SPA.
 
 ---
 
-## 🔌 Services
+## Services
 
 Gestiona:
 
@@ -165,14 +165,14 @@ Gestiona:
 
 ---
 
-## 🛣️ Router
+## Router
 
 El archivo `router.js` controla la navegación dinámica entre vistas sin recargar la página.
 
 ---
 
 
-# 🎯 Objetivos del proyecto
+# Objetivos del proyecto
 
 Este proyecto fue desarrollado con el objetivo de practicar:
 
