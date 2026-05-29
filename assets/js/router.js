@@ -5,7 +5,7 @@
 import { renderHome }     from './pages/home.js';
 import { renderContacts } from './pages/contacts.js';
 import { renderlocation } from './pages/location.js';
-import { renderepisode }  from './pages/episode.js';
+import { renderepisodes }  from './pages/episodes.js';
 
 function renderAbout() {
     document.getElementById('content').innerHTML = `
@@ -28,7 +28,7 @@ const routes = {
     '/contacts': renderContacts,
     '/about':    renderAbout,
     '/location': renderlocation,
-    '/episode':  renderepisode,
+    '/episode':  renderepisodes,
 };
 
 /**
