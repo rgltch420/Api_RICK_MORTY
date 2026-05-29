@@ -67,6 +67,7 @@ function attachEvents(container, apiCharacters){
 }
 
 function openEditModal(id, card, isLocal, onSave) {
+    if (document.querySelector('.modal-overlay')) return; 
     const currentName    = card.querySelector('h3').textContent.trim();
     const currentStatus  = card.querySelector('.card-body p:nth-child(2)').textContent.replace('Status:', '').trim();
     const currentSpecies = card.querySelector('.card-body p:nth-child(3)').textContent.replace('Species:', '').trim();
@@ -108,6 +109,7 @@ function openEditModal(id, card, isLocal, onSave) {
     });
 }
 function openCreateModal(onSave) {
+    if (document.querySelector('.modal-overlay')) return;
     const modal = document.createElement('div');
     modal.className = 'modal-overlay';
     modal.innerHTML = `
@@ -142,8 +144,6 @@ function openCreateModal(onSave) {
     `;
 
     document.body.appendChild(modal);
-
-    // Preview de imagen en tiempo real
     document.getElementById('create-image').addEventListener('input', (e) => {
         const url = e.target.value.trim();
         const preview = document.getElementById('create-preview');
