@@ -178,11 +178,7 @@ Este proyecto fue desarrollado con el objetivo de practicar:
 
 - Consumo de APIs REST
 - Arquitectura SPA
-- Modularización en JavaScript
 - Manipulación del DOM
-- Routing dinámico
-- Organización de proyectos frontend
-- Manejo de variables de entorno con Vite
 
 ---
 
